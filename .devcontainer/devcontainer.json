@@ -1,0 +1,25 @@
+{
+  "name": "VCC Measure Android",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "fwcd.kotlin",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup-android.sh",
+  "remoteUser": "vscode",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb",
+    "storage": "32gb"
+  }
+}
